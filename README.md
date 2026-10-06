@@ -2,7 +2,7 @@
 # ✨Lecture-Run✨
 ## 🚀 Live Application
 
-**[Open Lecture-Run](https://lecturerunner-c091q61ub-harshdakhare4s-projects.vercel.app/)**
+**[Open Lecture-Run](https://lecturerunner.vercel.app/)**
 ## Features
 
 - Manually enter total lecture duration.
