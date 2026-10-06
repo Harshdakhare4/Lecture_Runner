@@ -86,6 +86,3 @@ When you press **Crossed** at 10:23 for the first stop, the application records:
 - **Status:** 3 min late
 """
 
-path = Path("/mnt/data/README.md")
-path.write_text(readme, encoding="utf-8")
-print(f"Created: {path}")
