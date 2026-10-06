@@ -1,8 +1,4 @@
-from pathlib import Path
 
-readme = """# LectureRun — Lecture Running Tracker
-
-A dependency-free lecture tracking web application built with **HTML, CSS, and vanilla JavaScript**.
 
 ## 🚀 Live Application
 
