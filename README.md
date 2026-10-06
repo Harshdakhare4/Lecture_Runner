@@ -7,9 +7,6 @@ A dependency-free lecture tracking web application built with **HTML, CSS, and v
 ## 🚀 Live Application
 
 **[Open Lecture-Run](https://lecturerunner-c091q61ub-harshdakhare4s-projects.vercel.app/)**
-
-> Replace `YOUR_APPLICATION_LINK_HERE` with your deployed application URL, for example your Vercel URL.
-
 ## Features
 
 - Manually enter total lecture duration.
