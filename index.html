@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f172a">
+  <title>LectureRun — Lecture Running Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">LR</div>
+        <div>
+          <h1>LectureRun</h1>
+          <p>Track your lecture like a train</p>
+        </div>
+      </div>
+      <div class="live-clock" id="liveClock">--:--:--</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">STUDY RUNNING STATUS</span>
+          <h2>Stay on schedule.<br><span>Beat the clock.</span></h2>
+          <p>Set your own lecture checkpoints and expected arrival times. Press <b>Crossed</b> when you reach each checkpoint.</p>
+        </div>
+        <div class="hero-icon">⏱</div>
+      </section>
+
+      <section class="setup-card card">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">01 · SETUP</span>
+            <h3>Plan your lecture</h3>
+          </div>
+          <button class="ghost-btn" id="clearBtn">Clear</button>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            <span>Lecture name</span>
+            <input id="lectureName" type="text" placeholder="e.g. Operating Systems — Paging">
+          </label>
+          <label>
+            <span>Total duration <small>(HH:MM)</small></span>
+            <input id="duration" type="text" inputmode="numeric" placeholder="01:30">
+          </label>
+          <label>
+            <span>Start time</span>
+            <input id="startTime" type="time">
+          </label>
+        </div>
+
+        <div class="button-row">
+          <button class="primary-btn" id="startBtn">▶ Start Lecture</button>
+          <span class="start-note" id="startNote">Enter your start time and begin when you're ready.</span>
+        </div>
+      </section>
+
+      <section class="overview-grid">
+        <div class="card progress-card">
+          <div class="card-label">LECTURE COVERED</div>
+          <div class="big-number" id="covered">00:00 <span>/ 00:00</span></div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+          <div class="progress-meta">
+            <span id="progressPercent">0%</span>
+            <span id="remaining">00:00 remaining</span>
+          </div>
+        </div>
+
+        <div class="card status-card" id="overallCard">
+          <div class="card-label">RUNNING STATUS</div>
+          <div class="status-icon" id="statusIcon">●</div>
+          <div class="status-title" id="overallStatus">Not started</div>
+          <div class="status-sub" id="overallSub">Start the lecture to begin tracking.</div>
+        </div>
+
+        <div class="card finish-card">
+          <div class="card-label">PROJECTED COMPLETION</div>
+          <div class="finish-time" id="projectedFinish">—</div>
+          <div class="finish-sub" id="finishSub">Set a start time and duration.</div>
+        </div>
+      </section>
+
+      <section class="stops-section">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">02 · CHECKPOINTS</span>
+            <h3>Your lecture stops</h3>
+            <p>Add any number of stops — 2 min, 5 min, 15 min, 01:23… you decide.</p>
+          </div>
+          <button class="secondary-btn" id="addStopBtn">＋ Add Stop</button>
+        </div>
+
+        <div class="table-head">
+          <span>STOP</span>
+          <span>LECTURE POSITION</span>
+          <span>EXPECTED ARRIVAL</span>
+          <span>ACTUAL ARRIVAL</span>
+          <span>RUNNING</span>
+          <span></span>
+        </div>
+        <div id="stopsList"></div>
+      </section>
+
+      <section class="tip card">
+        <div class="tip-icon">💡</div>
+        <div>
+          <strong>How it works</strong>
+          <p>Lecture position is the point inside the video. Expected arrival is the clock time <b>you manually decide</b>. Nothing is calculated for you. When you reach a point, press <b>Crossed</b> and LectureRun records the actual time and compares it with your expectation.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>LectureRun · Your lecture, your schedule, your pace.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
